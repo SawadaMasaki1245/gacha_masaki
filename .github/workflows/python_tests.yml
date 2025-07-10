@@ -1,11 +1,11 @@
-name: Run Pthon Tests
+name: Run Python Tests
 
 on:
-    pull_request:
-     branches:
+  pull_request:
+    branches:
       - main
       - develop
-      - '*'   # 任意のブランチへのPRで動かしたい場合
+      - '*'
 
 jobs:
   test:
@@ -28,4 +28,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest
+          PYTHONPATH=. pytest
